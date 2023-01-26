@@ -3,20 +3,24 @@ export default class RandomNumberGenerator {
     this.colorLength = colorLength;
   }
 
-  randomNumber() {
+  #randomNumber() {
     return Math.floor(Math.random() * this.colorLength);
   }
 
   run() {
     let numberBox = [];
     let previousNumber;
-    while (numberBox.length < 2) {
-      const RandomeNumber = this.randomNumber();
+    while (this.#isNotMoreThanTwoNumbers(numberBox)) {
+      const RandomeNumber = this.#randomNumber();
       if (previousNumber !== RandomeNumber) {
         numberBox.push(RandomeNumber);
         previousNumber = RandomeNumber;
       }
     }
     return numberBox;
+  }
+
+  #isNotMoreThanTwoNumbers(numberBox) {
+    return numberBox.length < 2;
   }
 }
