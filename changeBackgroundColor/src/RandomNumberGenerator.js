@@ -8,19 +8,28 @@ export default class RandomNumberGenerator {
   }
 
   run() {
-    let numberBox = [];
-    let previousNumber;
+    const numberBox = new Set();
     while (this.#isNotMoreThanTwoNumbers(numberBox)) {
-      const RandomeNumber = this.#randomNumber();
-      if (previousNumber !== RandomeNumber) {
-        numberBox.push(RandomeNumber);
-        previousNumber = RandomeNumber;
-      }
+      numberBox.add(this.#randomNumber());
     }
-    return numberBox;
+    return [...numberBox];
   }
 
   #isNotMoreThanTwoNumbers(numberBox) {
-    return numberBox.length < 2;
+    return numberBox.size < 2;
   }
 }
+
+/* run() {
+  let numberBox = [];
+  let previousNumber;
+  while (this.#isNotMoreThanTwoNumbers(numberBox)) {
+    const RandomeNumber = this.#randomNumber();
+    if (previousNumber !== RandomeNumber) {
+      numberBox.push(RandomeNumber);
+      previousNumber = RandomeNumber;
+    }
+  }
+  return numberBox;
+}
+ */
