@@ -37,7 +37,9 @@ const changeBackgroundColor = (function () {
 })();
 
 function isNotSameAsPerviousNumbers(RandomNumbers, previousNumbers) {
-  return JSON.stringify(RandomNumbers) !== JSON.stringify(previousNumbers);
+  const firstCase = JSON.stringify(RandomNumbers) !== JSON.stringify(previousNumbers);
+  const secondCase = JSON.stringify(RandomNumbers.reverse()) !== JSON.stringify(previousNumbers);
+  return firstCase || secondCase;
 }
 
 export default changeBackgroundColor;
