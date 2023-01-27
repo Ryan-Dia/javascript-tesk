@@ -7,8 +7,27 @@
   </head>
 
   <body>
-    <button id="button">Give me color</button>
+    <div id="calendar">
+      <div class="calendar_yearAndMonth">
+        <div class="calendar_year"></div>
+        <div class="calendar_month"></div>
+      </div>
 
-    <script src="src/index.js"></script>
+      <div class="calendar_days">
+        <div class="calendar_week">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Thur</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="calendar_date"></div>
+      </div>
+      <button class="previous">previous</button>
+      <button class="next">next</button>
+    </div>
+
+    <script defer src="src/calendar.js"></script>
   </body>
 </html>

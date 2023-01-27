@@ -1,0 +1,14 @@
+.calendar_yearAndMonth {
+  display: flex;
+  gap: 10px;
+}
+
+.calendar_week {
+  display: flex;
+  gap: 13px;
+}
+
+.calendar_date {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
