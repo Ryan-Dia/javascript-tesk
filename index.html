@@ -7,27 +7,48 @@
   </head>
 
   <body>
-    <div id="calendar">
-      <div class="calendar_yearAndMonth">
-        <div class="calendar_year"></div>
-        <div class="calendar_month"></div>
+    <div class="wrapper">
+      <div id="calendar">
+        <div class="calendar_yearAndMonth">
+          <div class="calendar_year"></div>
+          <div class="calendar_month"></div>
+        </div>
+
+        <div class="calendar_days">
+          <div class="calendar_week">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Thur</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div class="calendar_date"></div>
+        </div>
+        <button class="previous">previous</button>
+        <button class="next">next</button>
       </div>
 
-      <div class="calendar_days">
-        <div class="calendar_week">
-          <div>Sun</div>
-          <div>Mon</div>
-          <div>Tue</div>
-          <div>Thur</div>
-          <div>Fri</div>
-          <div>Sat</div>
+      <br />
+
+      <div class="toDo">
+        <form action="" class="toDo-form">
+          <input type="text" placeholder="Write To do" />
+        </form>
+        <div class="toDo-list">
+          <div class="toDo-list_toDo">
+            <h2>To Do List</h2>
+            <ul class="toDo-list_toDoList"></ul>
+          </div>
+          <div class="js-todo">
+            <h2>Finished</h2>
+            <ul class="toDo-list_finished"></ul>
+          </div>
         </div>
-        <div class="calendar_date"></div>
       </div>
-      <button class="previous">previous</button>
-      <button class="next">next</button>
     </div>
 
-    <script defer src="src/calendar.js"></script>
+    <script src="src/calendar.js"></script>
+    <script src="src/toDos.js"></script>
   </body>
 </html>
