@@ -1,0 +1,19 @@
+.logIn-greetings,
+.aa {
+  display: none;
+}
+.showing {
+  display: block;
+}
+
+#clock {
+  color: white;
+}
+
+.logIn-form input::placeholder {
+  color: black;
+}
+
+.logIn-form input:focus {
+  outline: none;
+}
